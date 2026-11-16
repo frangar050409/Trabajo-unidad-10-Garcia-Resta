@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio de Funciones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p class="etiqueta">PLANO N.º 10 · FUNCTIONS JS</p>
+    <h1>Laboratorio<br>de Funciones</h1>
+    <p class="bajada">Cada máquina recibe parámetros, hace su trabajo y devuelve un valor con <code>return</code>.</p>
+  </header>
+
+  <main>
+    <section class="hoja" id="matematica">
+      <h2><span>01</span> Matemática Simple</h2>
+      <p class="nota">Triplicá 5, multiplicalo por 12, dividilo por 12 y buscá el resto de dividir por 3, usando solo las funciones.</p>
+      <div class="controles">
+        <label>Número inicial <input type="number" id="numInicial" value="5"></label>
+        <button type="button" id="btnTuberia">▶ Encender la tubería</button>
+      </div>
+      <div class="tuberia" id="tuberia">
+        <div class="maquina" data-paso="0"><p>triplicador(n)</p><output>?</output></div>
+        <div class="maquina" data-paso="1"><p>multiplicador(n, 12)</p><output>?</output></div>
+        <div class="maquina" data-paso="2"><p>division(n, 12)</p><output>?</output></div>
+        <div class="maquina" data-paso="3"><p>resto(n, 3)</p><output>?</output></div>
+        <span class="bolita" id="bolita"></span>
+      </div>
+      <pre><code>resto(division(multiplicador(triplicador(5), 12), 12), 3)</code></pre>
+    </section>
+
+    <section class="hoja" id="devuelve">
+      <h2><span>02</span> ¿Qué devuelve cada función?</h2>
+      <p class="nota">Pensalo antes de dar vuelta la tarjeta.</p>
+      <div class="cartas">
+        <button type="button" class="carta">
+          <span class="carta__cara">
+            <code>function test1(x, y) {<br>&nbsp;&nbsp;return y - x<br>}<br>test1(10, 40)</code>
+            <small>Tocá para ver la respuesta</small>
+          </span>
+          <span class="carta__dorso">
+            <strong>30</strong>
+            <small>y vale 40 y x vale 10: 40 − 10 = 30.</small>
+          </span>
+        </button>
+        <button type="button" class="carta">
+          <span class="carta__cara">
+            <code>function test2(x, y) {<br>&nbsp;&nbsp;return x * 2<br>&nbsp;&nbsp;console.log(x)<br>&nbsp;&nbsp;return x / 2<br>}<br>test2(10)</code>
+            <small>Tocá para ver la respuesta</small>
+          </span>
+          <span class="carta__dorso">
+            <strong>20</strong>
+            <small>El primer return corta la función: el console.log y el segundo return nunca se ejecutan.</small>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section class="hoja" id="contar">
+      <h2><span>03</span> contarDeA_n</h2>
+      <div class="controles">
+        <label>contar_de_a <input type="number" id="deA" value="5" min="1"></label>
+        <label>contar_hasta <input type="number" id="hasta" value="50" min="1"></label>
+      </div>
+      <div class="regla" id="regla"></div>
+      <pre class="consola" id="consolaContar"></pre>
+    </section>
+
+    <section class="hoja" id="factorial">
+      <h2><span>04</span> Factorial()</h2>
+      <div class="controles">
+        <label>Número <input type="number" id="numFactorial" value="5" min="-10" max="20"></label>
+      </div>
+      <p class="expansion" id="expansion"></p>
+      <p class="resultado" id="resultadoFactorial"></p>
+      <div class="barras" id="barras"></div>
+    </section>
+  </main>
+
+  <footer>Francisco García R. · Unidad 10 · Abrí la consola para ver los console.log de la consigna</footer>
+
+  <script src="consigna.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
